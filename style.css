@@ -1,0 +1,72 @@
+body {
+    font-family: "Arial Black";
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 20px;
+}
+
+i.fa {
+    font-size: 55px;
+    margin: 20px 0 0 0;
+}
+
+.userChoices{
+    display: inline;
+    float: left;
+    margin-left: 150px;
+}
+.choice{
+    position:relative;
+    display: inline-block;
+    border: none;
+    background: #fff;
+    font-size: 16px;
+    margin: 16px;
+    outline: none;
+    cursor: pointer;
+}
+.computerChoice{
+    float: right;
+    margin-right:150px;
+    display: inline-block;
+}
+
+.compChoice {
+    position:relative;
+    display: inline-block;
+    border: none;
+    background: #fff;
+    font-size: 16px;
+    margin: 16px;
+    cursor: pointer;
+    outline: none;
+}
+#userScore, #compScore{
+    font-size: 30px;
+    margin: 50px;
+}
+
+#reset {
+    border:  solid  #4b4b4b;
+    width: 100px;
+    padding: 5px;
+    color:#4b4b4b;
+    font-size: 18px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+#reset:hover {
+    border:  solid  #019cdf;
+    color: #019cdf;
+}
+.score {
+    margin-top:15%;
+}
+
+
