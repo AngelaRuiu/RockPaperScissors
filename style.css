@@ -11,62 +11,85 @@ p {
     font-size: 20px;
 }
 
-i.fa {
-    font-size: 55px;
-    margin: 20px 0 0 0;
+.content-grid {
+    max-width: 960px;
 }
 
-.userChoices{
-    display: inline;
+.float-left {
     float: left;
-    margin-left: 150px;
 }
-.choice{
-    position:relative;
-    display: inline-block;
-    border: none;
-    background: #fff;
-    font-size: 16px;
-    margin: 16px;
-    outline: none;
-    cursor: pointer;
-}
-.computerChoice{
+
+.float-right {
     float: right;
-    margin-right:150px;
-    display: inline-block;
 }
 
-.compChoice {
-    position:relative;
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin-left {
+    margin-left: 70px;
+}
+
+.margin-right {
+    margin-right: 70px;
+}
+
+.font-big {
+    font-size: 30px;
+}
+
+.icon-size {
+    font-size: 55px;
+}
+
+.vertically-align {
+    margin: auto;
+    vertical-align: middle;
+}
+
+.btn {
+    position: relative;
     display: inline-block;
+    margin: 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn--choice {
     border: none;
     background: #fff;
-    font-size: 16px;
-    margin: 16px;
-    cursor: pointer;
-    outline: none;
-}
-#userScore, #compScore{
-    font-size: 30px;
-    margin: 50px;
 }
 
-#reset {
-    border:  solid  #4b4b4b;
+.btn--reset {
+    border: solid #4b4b4b;
     width: 100px;
     padding: 5px;
-    color:#4b4b4b;
+    color: #4b4b4b;
     font-size: 18px;
     background-color: #fff;
-    margin-top: 10px;
+    margin-top: 30px;
 }
-#reset:hover {
-    border:  solid  #019cdf;
+
+.btn--reset:hover {
+    border: solid #019cdf;
     color: #019cdf;
 }
-.score {
-    margin-top:15%;
+
+@media screen and (max-width: 299px) {
+    .icon-size {
+        font-size: 16px;
+    }
 }
 
+@media screen and (min-width: 300px) and (max-width: 799px) {
+    .icon-size {
+        font-size: 24px;
+    }
+}
 
+@media screen and (min-width: 800px) {
+    .icon-size {
+        font-size: 50px;
+    }
+}
