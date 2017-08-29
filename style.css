@@ -63,22 +63,30 @@ p {
 
 .btn--reset {
     border: solid #4b4b4b;
+    border-radius: 5px;
     width: 100px;
     padding: 5px;
     color: #4b4b4b;
     font-size: 18px;
     background-color: #fff;
-    margin-top: 30px;
 }
 
 .btn--reset:hover {
     border: solid #019cdf;
     color: #019cdf;
 }
-
+.center-align{
+   width: 100%;
+}
 @media screen and (max-width: 299px) {
     .icon-size {
         font-size: 16px;
+    }
+    .show-on-tablet{
+        display: block;
+    }
+    .show-on-phone{
+        display: block;
     }
 }
 
@@ -86,10 +94,22 @@ p {
     .icon-size {
         font-size: 24px;
     }
+    .show-on-tablet{
+        display: block;
+    }
+    .show-on-phone{
+        display: block;
+    }
 }
 
 @media screen and (min-width: 800px) {
     .icon-size {
         font-size: 50px;
+    }
+    .show-on-tablet{
+        display: none;
+    }
+    .show-on-phone{
+        display: none;
     }
 }
