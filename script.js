@@ -2,9 +2,9 @@
 var userChoice;
 
 function rockSelected() {
-    var rockSelectedU = document.querySelector("#rock");
-    var paperNotSelectedU = document.querySelector("#paper");
-    var scissorsNotSelectedU = document.querySelector("#scissors");
+    var rockSelectedU = document.querySelector(".is-rock-selected-user");
+    var paperNotSelectedU = document.querySelector(".is-paper-selected-user");
+    var scissorsNotSelectedU = document.querySelector(".is-scissors-selected-user");
     var userSelected = "color: #019cdf;  opacity: 1";
     var userNotSelected = "color: #4b4b4b; opacity: .3";
     rockSelectedU.style.cssText = userSelected;
@@ -14,9 +14,9 @@ function rockSelected() {
 }
 
 function paperSelected() {
-    var paperSelectedU = document.querySelector("#paper");
-    var rockNotSelectedU = document.querySelector("#rock");
-    var scissorsNotSelectedU = document.querySelector("#scissors");
+    var paperSelectedU = document.querySelector(".is-paper-selected-user");
+    var rockNotSelectedU = document.querySelector(".is-rock-selected-user");
+    var scissorsNotSelectedU = document.querySelector(".is-scissors-selected-user");
     var userSelected = "color: #019cdf;  opacity: 1";
     var userNotSelected = "color:#4b4b4b ; opacity: .3";
     paperSelectedU.style.cssText = userSelected;
@@ -26,9 +26,9 @@ function paperSelected() {
 }
 
 function scissorsSelected() {
-    var scissorsSelectedU = document.querySelector("#scissors");
-    var rockNotSelectedU = document.querySelector("#rock");
-    var paperNotSelectedU = document.querySelector("#paper");
+    var scissorsSelectedU = document.querySelector(".is-scissors-selected-user");
+    var rockNotSelectedU = document.querySelector(".is-rock-selected-user");
+    var paperNotSelectedU = document.querySelector(".is-paper-selected-user");
     var userSelected = "color: #019cdf;  opacity: 1";
     var userNotSelected = "color: #4b4b4b; opacity: .3";
     scissorsSelectedU.style.cssText = userSelected;
@@ -43,9 +43,9 @@ function getCompChoice() {
 }
 
 function compPaperSelected() {
-    var rockSelectedC = document.getElementById("compChoiceRock");
-    var scissorsSelectedC = document.getElementById("compChoiceScissors");
-    var paperSelectedC = document.getElementById("compChoicePaper");
+    var rockSelectedC = document.querySelector(".is-rock-selected-comp");
+    var scissorsSelectedC = document.querySelector(".is-scissors-selected-comp");
+    var paperSelectedC = document.querySelector(".is-paper-selected-comp");
     var compSelected = "color: #8fb24c; opacity: 1;";
     var compNotSelected = "color: #4b4b4b; opacity: .3";
     paperSelectedC.style.cssText = compSelected;
@@ -54,9 +54,9 @@ function compPaperSelected() {
 }
 
 function compScissorsSelected() {
-    var rockSelectedC = document.getElementById("compChoiceRock");
-    var scissorsSelectedC = document.getElementById("compChoiceScissors");
-    var paperSelectedC = document.getElementById("compChoicePaper");
+    var rockSelectedC = document.querySelector(".is-rock-selected-comp");
+    var scissorsSelectedC = document.querySelector(".is-scissors-selected-comp");
+    var paperSelectedC = document.querySelector(".is-paper-selected-comp");
     var compSelected = "color: #8fb24c; opacity: 1;";
     var compNotSelected = "color: #4b4b4b; opacity: .3";
     scissorsSelectedC.style.cssText = compSelected;
@@ -65,9 +65,9 @@ function compScissorsSelected() {
 }
 
 function compRockSelected() {
-    var rockSelectedC = document.getElementById("compChoiceRock");
-    var scissorsSelectedC = document.getElementById("compChoiceScissors");
-    var paperSelectedC = document.getElementById("compChoicePaper");
+    var rockSelectedC = document.querySelector(".is-rock-selected-comp");
+    var scissorsSelectedC = document.querySelector(".is-scissors-selected-comp");
+    var paperSelectedC = document.querySelector(".is-paper-selected-comp");
     var compSelected = "color: #8fb24c; opacity: 1;";
     var compNotSelected = "color: #4b4b4b; opacity: .3";
     rockSelectedC.style.cssText = compSelected;
@@ -76,9 +76,9 @@ function compRockSelected() {
 }
 
 function compChoiceReset() {
-    var rockSelectedC = document.getElementById("compChoiceRock");
-    var scissorsSelectedC = document.getElementById("compChoiceScissors");
-    var paperSelectedC = document.getElementById("compChoicePaper");
+    var rockSelectedC = document.querySelector(".is-rock-selected-comp");
+    var scissorsSelectedC = document.querySelector(".is-scissors-selected-comp");
+    var paperSelectedC = document.querySelector(".is-paper-selected-comp");
     var compReset = "color: #000; opacity: 1;";
     rockSelectedC.style.cssText = compReset;
     paperSelectedC.style.cssText = compReset;
@@ -86,9 +86,9 @@ function compChoiceReset() {
 }
 
 function userChoiceReset() {
-    var paperSelectedU = document.querySelector("#paper");
-    var rockNotSelectedU = document.querySelector("#rock");
-    var scissorsNotSelectedU = document.querySelector("#scissors");
+    var paperSelectedU = document.querySelector(".is-paper-selected-user");
+    var rockNotSelectedU = document.querySelector(".is-rock-selected-user");
+    var scissorsNotSelectedU = document.querySelector(".is-scissors-selected-user");
     var userReset = "color: #000; opacity: 1;";
     paperSelectedU.style.cssText = userReset;
     rockNotSelectedU.style.cssText = userReset;
@@ -97,9 +97,9 @@ function userChoiceReset() {
 
 function play() {
     var compChoice = getCompChoice();
-    var userScore = document.getElementById("userScore");
-    var compScore = document.getElementById("compScore");
-    var winner = document.querySelector("#winner");
+    var userScore = document.querySelector(".is-user-score-shown");
+    var compScore = document.querySelector(".is-comp-score-shown");
+    var winner = document.querySelector(".is-winner-shown");
     var userScoreColor = "color: #019cdf;  opacity: 1";
     var compScoreColor = "color: #8fb24c; opacity: 1;";
     if (userChoice == "rock") {
@@ -166,10 +166,10 @@ function play() {
 
 function resetGame() {
 
-    var userScore = document.getElementById("userScore");
-    var compScore = document.getElementById("compScore");
-    document.getElementById("userScore").innerHTML = "0";
-    document.getElementById("compScore").innerHTML = "0";
+    var userScore = document.querySelector(".is-user-score-shown");
+    var compScore = document.querySelector(".is-comp-score-shown");
+    document.querySelector(".is-user-score-shown").innerHTML = "0";
+    document.querySelector(".is-comp-score-shown").innerHTML = "0";
     userChoiceReset();
     compChoiceReset();
     compScore.style.cssText = "#000";

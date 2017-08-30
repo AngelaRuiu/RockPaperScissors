@@ -10,117 +10,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="mdl/material.min.js"></script>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-<div class="gamecontainer">
+<div>
     <h1>Rock, Paper, Scissors</h1>
 
     <h4>How the game works<br>
         - Rock beats Scissors, Scissor beats Paper, Paper beats Rock-
     </h4>
-
-    <div class="content-grid mdl-grid .fixed-center is-user-selected" onclick="play()">
+    <div class="content-grid mdl-grid .fixed-center is-user-selected" onclick="play('btn--choice')">
         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--5-col-phone float-left">
             <h4>Select your weapon:</h4>
             <button class="btn btn--choice" onclick="rockSelected()">
-                <i class=" icon-size fa fa-hand-rock-o margin-top is-rock-active "></i><br>
+                <i class=" icon icon--user fa fa-hand-rock-o margin-top is-rock-selected-user"></i><br>
                 Rock
             </button>
             <br>
             <button class="btn btn--choice" onclick="paperSelected()">
-                <i class=" icon-size fa fa-hand-paper-o margin-top is-paper-active "></i><br>
+                <i class=" icon icon--user fa fa-hand-paper-o margin-top is-paper-selected-user "></i><br>
                 Paper
             </button>
             <br>
             <button class="btn btn--choice" onclick="scissorsSelected()">
-                <i class="icon-size fa fa-hand-scissors-o margin-top is-scissors-active "></i><br>
+                <i class="icon icon--user fa fa-hand-scissors-o margin-top is-scissors-selected-user "></i><br>
                 Scissors
             </button>
             <div class="margin-top show-on-tablet show-on-phone">
-            <h5>Player Score</h5>
-            <span class="float-left center-align font-big is-user-score">0</span>
+                <h5>Player Score</h5>
+                <span class="float-left center-align font-big is-user-score-user">0</span>
             </div>
         </div>
         <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone vertically-align">
             <section>
                 <h3>SCORE</h3>
                 <div>
-                    <span class="float-left margin-left font-big is-user-score">0</span>
-                    <span class="float-right margin-right font-big is-comp-score">0</span>
+                    <span class=" margin-right font-big display-inline-block is-user-score-shown">0</span>
+                    <span class=" margin-left font-big display-inline-block is-comp-score-shown">0</span>
                 </div>
-                <p class="is-text-hidden"></p>
+                <p class=" padding-top is-winner-shown"></p>
                 <button class="btn btn--reset is-reset" onclick="resetGame()">RESET</button>
             </section>
         </div>
         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--5-col-phone float-right">
             <h4>Computer weapon:</h4>
             <button class="btn btn--choice">
-                <i class="icon-size fa fa-hand-rock-o margin-top is-rock-selected"></i><br>
+                <i class="icon fa fa-hand-rock-o margin-top is-rock-selected-comp"></i><br>
                 Rock
             </button>
             <br>
             <button class="btn btn--choice">
-                <i class="icon-size fa fa-hand-paper-o margin-top is-paper-selected"></i><br>
+                <i class="icon fa fa-hand-paper-o margin-top is-paper-selected-comp"></i><br>
                 Paper
             </button>
             <br>
             <button class="btn btn--choice">
-                <i class="icon-size fa fa-hand-scissors-o margin-top is-scissors-selected"></i><br>
+                <i class="icon fa fa-hand-scissors-o margin-top is-scissors-selected-comp"></i><br>
                 Scissors
             </button>
             <div class="margin-top show-on-tablet show-on-phone">
-            <h5 class="margin-top">Computer Score</h5>
-            <span class="float-right center-align font-big is-comp-score">0</span>
+                <h5 class="margin-top">Computer Score</h5>
+                <span class="float-right center-align font-big is-comp-score">0</span>
             </div>
         </div>
     </div>
-</div>
-
-<!-- <div class="userChoices" onclick=" play('choice')">
-     <h4>Select your weapon:</h4>
-     <button class="choice" onclick="rockSelected()">
-         <i class="fa fa-hand-rock-o" id="rock"></i><br>
-         Rock
-     </button><br>
-     <button class="choice" onclick="paperSelected()">
-         <i class="fa fa-hand-paper-o" id="paper"></i><br>
-         Paper
-     </button><br>
-     <button class="choice" onclick="scissorsSelected()">
-         <i class="fa fa-hand-scissors-o" id="scissors"></i><br>
-         Scissors
-     </button>
- </div>
- <div class="computerChoice">
-     <h4>Computer weapon:</h4>
-     <button class="compChoice" >
-         <i class="fa fa-hand-rock-o" id="compChoiceRock"></i><br>
-         Rock
-     </button><br>
-     <button class="compChoice" >
-         <i class="fa fa-hand-paper-o" id="compChoicePaper"></i><br>
-         Paper
-     </button><br>
-     <button class="compChoice" >
-         <i class="fa fa-hand-scissors-o" id="compChoiceScissors"></i><br>
-         Scissors
-     </button>
- </div>
- <p id="compResult"></p>
-
- <div class="result">
-     <section class="score">
-         <h3>SCORES</h3>
-         <div class="current-scores">
-             <span id="userScore">0</span>
-             <span id="compScore">0</span>
-         </div>
-     <p id="winner"></p>
- <button id="reset" onclick="resetGame()">RESET</button>
-</section>
-     </div>-->
 </div>
 </body>
 </html>

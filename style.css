@@ -23,24 +23,24 @@ p {
     float: right;
 }
 
-.margin-top {
-    margin-top: 20px;
+.padding-top {
+    padding-top: 20px;
 }
 
 .margin-left {
-    margin-left: 70px;
+    margin-left: 50px;
 }
 
 .margin-right {
-    margin-right: 70px;
+    margin-right: 50px;
+}
+
+.display-inline-block{
+    display: inline-block;
 }
 
 .font-big {
     font-size: 30px;
-}
-
-.icon-size {
-    font-size: 55px;
 }
 
 .vertically-align {
@@ -61,6 +61,13 @@ p {
     background: #fff;
 }
 
+.icon--user:hover{
+    color: #019cdf;
+    outline: none;
+    transform: scale(1.30);
+    transition: 0.3s ease-in-out;
+}
+
 .btn--reset {
     border: solid #4b4b4b;
     border-radius: 5px;
@@ -73,13 +80,14 @@ p {
 
 .btn--reset:hover {
     border: solid #019cdf;
-    color: #019cdf;
+    background-color: #019cdf;
+    color: #fff3e0;
 }
 .center-align{
    width: 100%;
 }
 @media screen and (max-width: 299px) {
-    .icon-size {
+    .icon {
         font-size: 16px;
     }
     .show-on-tablet{
@@ -88,10 +96,14 @@ p {
     .show-on-phone{
         display: block;
     }
+    .icon--user:hover{
+        transform: scale(.50);
+        transition: 0.3s ease-in-out;
+    }
 }
 
 @media screen and (min-width: 300px) and (max-width: 799px) {
-    .icon-size {
+    .icon {
         font-size: 24px;
     }
     .show-on-tablet{
@@ -100,10 +112,14 @@ p {
     .show-on-phone{
         display: block;
     }
+    .icon--user:hover{
+        transform: scale(1.0);
+        transition: 0.3s ease-in-out;
+    }
 }
 
 @media screen and (min-width: 800px) {
-    .icon-size {
+    .icon {
         font-size: 50px;
     }
     .show-on-tablet{
