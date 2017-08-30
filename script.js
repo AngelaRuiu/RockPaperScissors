@@ -165,13 +165,39 @@ function play() {
 }
 
 function resetGame() {
-
     var userScore = document.querySelector(".is-user-score-shown");
     var compScore = document.querySelector(".is-comp-score-shown");
     document.querySelector(".is-user-score-shown").innerHTML = "0";
     document.querySelector(".is-comp-score-shown").innerHTML = "0";
+    document.querySelector(".is-winner-shown").innerHTML = "";
     userChoiceReset();
     compChoiceReset();
     compScore.style.cssText = "#000";
     userScore.style.cssText = "#000";
 }
+function doNotShowPaperTxt() {
+    var txt = document.querySelector(".is-txt-paper-hidden");
+    txt.style.display = "none";
+}
+function showPaperTxt() {
+    var txt = document.querySelector(".is-txt-paper-hidden");
+    txt.style.display = "block";
+}
+function doNotShowRockTxt() {
+    var txt = document.querySelector(".is-txt-rock-hidden");
+    txt.style.display = "none";
+}
+function showRockTxt() {
+    var txt = document.querySelector(".is-txt-rock-hidden");
+    txt.style.display = "block";
+}
+
+function doNotShowScissorsTxt() {
+    var txt = document.querySelector(".is-txt-scissors-hidden");
+    txt.style.display = "none";
+}
+function showScissorsTxt() {
+    var txt = document.querySelector(".is-txt-scissors-hidden");
+    txt.style.display = "block";
+}
+

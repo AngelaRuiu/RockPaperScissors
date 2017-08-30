@@ -3,8 +3,14 @@ body {
     text-align: center;
 }
 
-h1 {
+.h1-size {
     font-size: 36px;
+}
+.h3-size{
+    font-size: 26px;
+}
+.h5-size{
+    font-size: 20px;
 }
 
 p {
@@ -22,8 +28,10 @@ p {
 .float-right {
     float: right;
 }
-
-.padding-top {
+.no-margin{
+    margin: 0!important;
+}
+.margin-top {
     padding-top: 20px;
 }
 
@@ -40,7 +48,7 @@ p {
 }
 
 .font-big {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .vertically-align {
@@ -64,8 +72,16 @@ p {
 .icon--user:hover{
     color: #019cdf;
     outline: none;
-    transform: scale(1.30);
-    transition: 0.3s ease-in-out;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+   /* transform: scale(1.30);
+    transition: 0.3s ease-in-out;*/
 }
 
 .btn--reset {
@@ -87,22 +103,19 @@ p {
    width: 100%;
 }
 @media screen and (max-width: 299px) {
-    .icon {
+    .h1-size {
+        font-size: 24px;
+    }
+    .h3-size{
+        font-size: 20px;
+    }
+    .h5-size{
         font-size: 16px;
     }
-    .show-on-tablet{
-        display: block;
-    }
-    .show-on-phone{
-        display: block;
-    }
-    .icon--user:hover{
-        transform: scale(.50);
-        transition: 0.3s ease-in-out;
-    }
-}
 
-@media screen and (min-width: 300px) and (max-width: 799px) {
+    p {
+        font-size: 14px;
+    }
     .icon {
         font-size: 24px;
     }
@@ -112,9 +125,30 @@ p {
     .show-on-phone{
         display: block;
     }
-    .icon--user:hover{
-        transform: scale(1.0);
-        transition: 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 300px) and (max-width: 799px) {
+    .icon {
+        font-size: 36px;
+    }
+    .show-on-tablet{
+        display: block;
+    }
+    .show-on-phone{
+        display: block;
+    }
+    .h1-size {
+        font-size: 20px;
+    }
+    .h3-size{
+        font-size: 18px;
+    }
+    .h5-size{
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 18px;
     }
 }
 

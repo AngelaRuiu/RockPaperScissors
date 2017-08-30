@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="mdl/material.min.css" media="screen,projection"/>
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_green.min.css"/>
+    <link type="text/css" rel="stylesheet" href="mdl/material.min.css" media="screen,projection"/>
     <link rel="stylesheet" href="Font%20Awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,27 +15,28 @@
 </head>
 <body>
 <div>
-    <h1>Rock, Paper, Scissors</h1>
+    <h1 class="h1-size">Rock, Paper, Scissors</h1>
 
-    <h4>How the game works<br>
-        - Rock beats Scissors, Scissor beats Paper, Paper beats Rock-
-    </h4>
-    <div class="content-grid mdl-grid .fixed-center is-user-selected" onclick="play('btn--choice')">
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--5-col-phone float-left">
-            <h4>Select your weapon:</h4>
-            <button class="btn btn--choice" onclick="rockSelected()">
+    <h3 class="no-margin h3-size">How the game works</h3>
+    <h5 class="no-margin h5-size">- Rock beats Scissors, Scissor beats Paper, Paper beats Rock-</h5>
+    <div class="content-grid mdl-grid .fixed-center">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--5-col-phone float-left"
+             onclick="play()">
+            <h3 class="h3-size">Select your weapon:</h3>
+            <button class="btn btn--choice" onclick="rockSelected()" onmouseover="doNotShowRockTxt()" onmouseout="showRockTxt()" >
                 <i class=" icon icon--user fa fa-hand-rock-o margin-top is-rock-selected-user"></i><br>
-                Rock
+                <span class="is-txt-rock-hidden">Rock</span>
             </button>
             <br>
-            <button class="btn btn--choice" onclick="paperSelected()">
+            <button class="btn btn--choice" onclick="paperSelected()" onmouseover="doNotShowPaperTxt()" onmouseout="showPaperTxt()">
                 <i class=" icon icon--user fa fa-hand-paper-o margin-top is-paper-selected-user "></i><br>
-                Paper
+                <span class="is-txt-paper-hidden">Paper</span>
             </button>
             <br>
-            <button class="btn btn--choice" onclick="scissorsSelected()">
-                <i class="icon icon--user fa fa-hand-scissors-o margin-top is-scissors-selected-user "></i><br>
-                Scissors
+            <button class="btn btn--choice" onclick="scissorsSelected()" onmouseover="doNotShowScissorsTxt()" onmouseout="showScissorsTxt()" >
+                <i class="icon icon--user fa fa-hand-scissors-o margin-top is-scissors-selected-user"
+                   ></i><br>
+                <span class="is-txt-scissors-hidden">Scissors</span>
             </button>
             <div class="margin-top show-on-tablet show-on-phone">
                 <h5>Player Score</h5>
@@ -44,17 +45,17 @@
         </div>
         <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone vertically-align">
             <section>
-                <h3>SCORE</h3>
+                <h3 class="h3-size">SCORE</h3>
                 <div>
                     <span class=" margin-right font-big display-inline-block is-user-score-shown">0</span>
                     <span class=" margin-left font-big display-inline-block is-comp-score-shown">0</span>
                 </div>
-                <p class=" padding-top is-winner-shown"></p>
+                <p class="padding-top is-winner-shown"></p>
                 <button class="btn btn--reset is-reset" onclick="resetGame()">RESET</button>
             </section>
         </div>
         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--5-col-phone float-right">
-            <h4>Computer weapon:</h4>
+            <h3 class="h3-size">Computer weapon:</h3>
             <button class="btn btn--choice">
                 <i class="icon fa fa-hand-rock-o margin-top is-rock-selected-comp"></i><br>
                 Rock
@@ -70,11 +71,11 @@
                 Scissors
             </button>
             <div class="margin-top show-on-tablet show-on-phone">
-                <h5 class="margin-top">Computer Score</h5>
+                <h5>Computer Score</h5>
                 <span class="float-right center-align font-big is-comp-score">0</span>
             </div>
         </div>
-    </div>
 </div>
+    </div>
 </body>
 </html>
