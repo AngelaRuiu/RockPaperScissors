@@ -1,6 +1,5 @@
 //Global Variables
 var userChoice;
-
 function rockSelected() {
     var rockSelectedU = document.querySelector(".is-rock-selected-user");
     var paperNotSelectedU = document.querySelector(".is-paper-selected-user");
@@ -102,18 +101,18 @@ function play() {
     var winner = document.querySelector(".is-winner-shown");
     var userScoreColor = "color: #019cdf;  opacity: 1";
     var compScoreColor = "color: #8fb24c; opacity: 1;";
-    if (userChoice == "rock") {
-        if (compChoice == "rock") {
+    if (userChoice === "rock") {
+        if (compChoice === "rock") {
             winner.innerHTML = "It's a tie!";
             compRockSelected();
         }
-        else if (compChoice == "paper") {
+        else if (compChoice === "paper") {
             winner.innerHTML = " Paper covers rock -You lose...";
             compPaperSelected();
             compScore.innerHTML++;
             compScore.style.cssText = compScoreColor;
         }
-        else if (compChoice == "scissors") {
+        else if (compChoice === "scissors") {
             winner = " Rock crushes scissors-You win!";
             compScissorsSelected();
             userScore.innerHTML++;
@@ -121,20 +120,20 @@ function play() {
         }
     }
 
-    if (userChoice == "paper") {
-        if (compChoice == "paper") {
+    if (userChoice === "paper") {
+        if (compChoice === "paper") {
             winner.innerHTML = "It's a tie!";
             compPaperSelected();
         }
 
-        else if (compChoice == "rock") {
+        else if (compChoice === "rock") {
             winner.innerHTML = "Paper covers rock.You win!";
             compRockSelected();
             userScore.innerHTML++;
             userScore.style.cssText = userScoreColor;
         }
 
-        else if (compChoice == "scissors") {
+        else if (compChoice === "scissors") {
             winner.innerHTML = "Scissors cut paper.You lose...";
             compScissorsSelected();
             compScore.innerHTML++;
@@ -142,20 +141,20 @@ function play() {
         }
     }
 
-    if (userChoice == "scissors") {
-        if (compChoice == "scissors") {
+    if (userChoice === "scissors") {
+        if (compChoice === "scissors") {
             winner.innerHTML = "It's a tie!";
             compScissorsSelected();
         }
 
-        else if (compChoice == "rock") {
+        else if (compChoice === "rock") {
             winner.innerHTML = "Rock crushes scissors.You lose...";
             compRockSelected();
             compScore.innerHTML++;
             compScore.style.cssText = compScoreColor;
         }
 
-        else if (compChoice == "paper") {
+        else if (compChoice === "paper") {
             winner.innerHTML = "Scissors cut paper.You win!";
             compPaperSelected();
             userScore.innerHTML++;
